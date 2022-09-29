@@ -77,12 +77,12 @@ If you use this work in your research or wish to refer to the baseline results p
   pages={780--789},
   year={2022}
 }
-@inproceedings{fan2020few,
-  title={Few-shot object detection with attention-RPN and multi-relation detector},
-  author={Fan, Qi and Zhuo, Wei and Tang, Chi-Keung and Tai, Yu-Wing},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={4013--4022},
-  year={2020}
+@inproceedings{han2021query,
+  title={Query adaptive few-shot object detection with heterogeneous graph convolutional networks},
+  author={Han, Guangxing and He, Yicheng and Huang, Shiyuan and Ma, Jiawei and Chang, Shih-Fu},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={3263--3272},
+  year={2021}
 }
 ```
 
