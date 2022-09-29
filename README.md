@@ -26,11 +26,11 @@ Our codebase is built upon [detectron2](https://github.com/facebookresearch/dete
 ```
 sh scripts/single_branch_pretraining_coco_pvt_v2_b2_li.sh
 ```
-- Initailized with the first step trained model, the training script for training the two-branch based model over base classes is
+- Then initailized with the first step trained model, the script for training the two-branch based model over base classes is
 ```
 sh scripts/two_branch_training_coco_pvt_v2_b2_li.sh
 ```
-- Then we perform 1/2/3/5/10/30-shot fine-tuning over novel classes, using the exact same few-shot datasets as [TFA](https://github.com/ucbdrive/few-shot-object-detection). The training script is
+- Finally we perform 1/2/3/5/10/30-shot fine-tuning over novel classes, using the exact same few-shot datasets as [TFA](https://github.com/ucbdrive/few-shot-object-detection). The training script is
 ```
 sh scripts/two_branch_few_shot_finetuning_coco_pvt_v2_b2_li.sh
 ```
