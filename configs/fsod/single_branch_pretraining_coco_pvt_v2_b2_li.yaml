@@ -1,0 +1,35 @@
+MODEL:
+  PIXEL_MEAN: [103.530, 116.280, 123.675]
+  PIXEL_STD: [57.375, 57.120, 58.395]
+  WEIGHTS: "./pvt_v2_b2_li_C4.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  BACKBONE:
+    FREEZE_AT: 1
+    NAME: "build_PVT_backbone"
+    TYPE: "pvt_v2_b2_li"
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  RPN:
+    PRE_NMS_TOPK_TEST: 6000
+    POST_NMS_TOPK_TEST: 1000
+  ROI_HEADS:
+    NAME: "PVTROIHeads"
+DATASETS:
+  TRAIN: ("coco_2014_train_nonvoc_with_small",)
+  TEST: ("coco_2014_val",)
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.0002
+  STEPS: (85000, 100000)
+  MAX_ITER: 110000
+  CHECKPOINT_PERIOD: 110000
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 800
+  MAX_SIZE_TEST: 1333
+OUTPUT_DIR: "./output/fsod/single_branch_pretraining_coco_pvt_v2_b2_li/"
+TEST:
+  EVAL_PERIOD: 20000
+VERSION: 2

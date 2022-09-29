@@ -1,0 +1,42 @@
+_BASE_: "Base-FSOD-C4.yaml"
+MODEL:
+  PIXEL_MEAN: [103.530, 116.280, 123.675]
+  PIXEL_STD: [57.375, 57.120, 58.395]
+  WEIGHTS: "./output/fsod/single_branch_pretraining_pascalvoc_split3_pvt_v2_b2_li/model_final.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  BACKBONE:
+    FREEZE_AT: 1
+    NAME: "build_FCT_backbone"
+    TYPE: "pvt_v2_b2_li"
+  ROI_HEADS:
+    SCORE_THRESH_TEST: 0.0
+  RPN:
+    PRE_NMS_TOPK_TEST: 12000
+    POST_NMS_TOPK_TEST: 100
+OUTPUT_DIR: './output/fsod/two_branch_training_pascalvoc_split3_pvt_v2_b2_li'
+DATASETS:
+  TRAIN: ("voc_2007_trainval_base3", "voc_2012_trainval_base3")
+  TEST: ("voc_2007_test_all3",)
+  TEST_KEEPCLASSES: 'all3'
+  TEST_SHOTS: (1,2,3,5,10)
+INPUT:
+  FS:
+    SUPPORT_WAY: 2
+    SUPPORT_SHOT: 30
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 600
+  MAX_SIZE_TEST: 1000
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.00002
+  STEPS: (7500, 10000)
+  MAX_ITER: 10000
+  WARMUP_ITERS: 500
+  WARMUP_FACTOR: 0.1
+  CHECKPOINT_PERIOD: 10000
+  HEAD_LR_FACTOR: 2.0
+TEST:
+  EVAL_PERIOD: 10000
