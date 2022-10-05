@@ -20,6 +20,12 @@ Please note that we used detectron 0.2.1 in this project. Higher versions of det
 - Please prepare the original PASCAL VOC and MSCOCO datasets and also the few-shot datasets following [TFA](https://github.com/ucbdrive/few-shot-object-detection/blob/master/datasets/README.md) in the folder ./datasets/coco and ./datasets/pascal_voc respectively.
 - Please run the scripts in ./datasets/coco and ./datasets/pascal_voc step by step to generate the support images for both many-shot base classes (used during meta-training) and few-shot classes (used during few-shot fine-tuning).
 
+## Converting ImageNnet pre-trained [PVT](https://github.com/whai362/PVT/tree/v2/classification#model-zoo) models into C4-based detection format
+The script is 
+```
+python build_pvt_C4_from_official_model.py
+```
+We use the converted model pvt_v2_b2_li_C4.pth by default next.
 
 ## Model training and evaluation on MSCOCO
 
