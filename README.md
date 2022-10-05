@@ -60,9 +60,9 @@ sh scripts/two_branch_training_pascalvoc_split3_pvt_v2_b2_li.sh
 sh scripts/two_branch_few_shot_finetuning_pascalvoc_split3_pvt_v2_b2_li.sh
 ```
 
-## Pre-training models 
+## Pre-trained models 
 
-We provided the meta-trained models (the two-branch based model) over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [here](https://drive.google.com/drive/u/0/folders/11ODEuV1iaKRZp_XQgEfnuwmIK00FIv1S) 
+We provided the meta-trained models (the two-branch based model) over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [here](https://drive.google.com/drive/u/0/folders/1VFkR6siG4TH6L2ASxpefYMIYMNH_CjoB).
 
 ## Citing FCT
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
