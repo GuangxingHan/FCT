@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Created on Thursday, March 16, 2023
+@author: Guangxing Han
+"""
+
 # model architecture: pvt_v2_b2_li
 # mask_cur is the attention map of attn_x (https://github.com/GuangxingHan/FCT/blob/main/FCT/modeling/fsod/FCT.py#L197) at the head_ head and the idx_ row
 mask_cur = attn_x[0][head_][idx_].squeeze()
