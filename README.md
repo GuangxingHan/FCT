@@ -68,7 +68,7 @@ sh scripts/two_branch_few_shot_finetuning_pascalvoc_split3_pvt_v2_b2_li.sh
 
 ## Model Zoo 
 
-We provided the single-branch pre-trained models and meta-trained models (the two-branch based models) over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [Google Drive](https://drive.google.com/drive/u/0/folders/1VFkR6siG4TH6L2ASxpefYMIYMNH_CjoB) and [Tencent Weiyun](https://share.weiyun.com/Oy0yoJyB).
+We provided both the single-branch pre-trained models and the meta-trained models (the two-branch based models) over base classes for both MSCOCO dataset and the 3 splits on VOC dataset. The model links are [Google Drive](https://drive.google.com/drive/u/0/folders/1VFkR6siG4TH6L2ASxpefYMIYMNH_CjoB) and [Tencent Weiyun](https://share.weiyun.com/Oy0yoJyB).
 
 ## Citing FCT
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
